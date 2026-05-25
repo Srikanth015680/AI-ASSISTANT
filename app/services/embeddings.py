@@ -1,13 +1,29 @@
-from sentence_transformers import SentenceTransformer
+import os
+from google import genai
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+API_KEY = os.getenv("LLM_API_KEY")
+
+client = genai.Client(api_key=API_KEY)
 
 
 def generate_embedding(text):
-    embedding = model.encode(text, normalize_embeddings=True)
-    return embedding.tolist()
+    response = client.models.embed_content(
+        model="text-embedding-004",
+        contents=text
+    )
+
+    return response.embeddings[0].values
 
 
 def generate_embeddings(texts):
-    embeddings = model.encode(texts, normalize_embeddings=True)
-    return embeddings.tolist()
+    embeddings = []
+
+    for text in texts:
+        response = client.models.embed_content(
+            model="text-embedding-004",
+            contents=text
+        )
+
+        embeddings.append(response.embeddings[0].values)
+
+    return embeddings

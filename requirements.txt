@@ -3,8 +3,6 @@ uvicorn
 python-dotenv
 numpy
 scikit-learn
-sentence-transformers
 pydantic
 httpx
 google-genai
-torch --index-url https://download.pytorch.org/whl/cpu
