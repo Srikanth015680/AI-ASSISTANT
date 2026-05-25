@@ -8,7 +8,7 @@ client = genai.Client(api_key=API_KEY)
 
 def generate_embedding(text):
     response = client.models.embed_content(
-        model="text-embedding-004",
+        model="gemini-embedding-001",
         contents=text
     )
 
@@ -20,7 +20,7 @@ def generate_embeddings(texts):
 
     for text in texts:
         response = client.models.embed_content(
-            model="text-embedding-004",
+            model="gemini-embedding-001",
             contents=text
         )
 
