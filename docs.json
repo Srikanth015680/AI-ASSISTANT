@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Reset Password",
+    "content": "Users can reset their password from Settings > Security > Change Password. If they forget it, they can use the Forgot Password option on the login page."
+  },
+  {
+    "title": "Subscription Plans",
+    "content": "We offer Free, Pro, and Enterprise plans. Pro costs $19/month and includes more storage and support."
+  },
+  {
+    "title": "Two-Factor Authentication",
+    "content": "2FA can be enabled from Settings > Security > Two-Factor Authentication using apps like Google Authenticator or Authy."
+  },
+  {
+    "title": "Data Export",
+    "content": "Users can export their data from Account Settings > Privacy > Export Data."
+  },
+  {
+    "title": "API Access",
+    "content": "API keys can be generated from Settings > Developer > API Keys. Pro and Enterprise plans support API access."
+  },
+  {
+    "title": "Billing",
+    "content": "Billing settings and invoices are available in Account Settings > Billing."
+  },
+  {
+    "title": "Storage Limits",
+    "content": "Free users get 1 GB storage, Pro users get 50 GB, and Enterprise users get unlimited storage."
+  },
+  {
+    "title": "Team Management",
+    "content": "Users can invite team members and assign Admin, Editor, or Viewer roles."
+  },
+  {
+    "title": "Customer Support",
+    "content": "Support is available through email, help center, and community forums depending on the plan."
+  }
+]

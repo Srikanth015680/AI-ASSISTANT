@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>RAG Assistant</title>
+
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+
+  <div class="app-shell">
+
+    <aside class="sidebar">
+
+      <div class="logo">
+        RAG Assistant
+      </div>
+
+      <button id="newChatBtn" class="new-chat-btn">
+        New Chat
+      </button>
+
+      <div class="suggestions">
+        <button onclick="insertSuggestion('How do I reset my password?')">
+          Reset password
+        </button>
+
+        <button onclick="insertSuggestion('What are the subscription plans?')">
+          Subscription plans
+        </button>
+
+        <button onclick="insertSuggestion('How do I enable 2FA?')">
+          Enable 2FA
+        </button>
+      </div>
+
+    </aside>
+
+
+    <main class="chat-main">
+
+      <div class="chat-header">
+        Support Assistant
+      </div>
+
+      <div class="messages-area" id="messagesArea">
+
+        <div class="welcome-state" id="welcomeState">
+          <h2>How can I help you?</h2>
+        </div>
+
+      </div>
+
+
+      <div class="input-area">
+
+        <div class="input-wrapper">
+
+          <textarea
+            id="messageInput"
+            class="message-input"
+            placeholder="Ask something..."
+            rows="1"
+          ></textarea>
+
+          <button id="sendBtn" class="send-btn" disabled>
+            Send
+          </button>
+
+        </div>
+
+        <div id="chunksMeta"></div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+
+</body>
+</html>
